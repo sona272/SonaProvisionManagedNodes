@@ -22,7 +22,7 @@ resource "aws_key_pair" "aws-key" {
 #===========================================
 resource "aws_instance" "managed_node" {
   # Creates 3 identical aws ec2 instances
-  count = 3
+  count = 4
 
   instance_type               = "t2.micro"
   ami                         = data.aws_ssm_parameter.webserver-ami.value
